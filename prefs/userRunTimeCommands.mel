@@ -1,0 +1,20 @@
+//Maya Preference 2018 (Release 1)
+//
+//
+
+runTimeCommand
+	-annotation "add Inbetween"
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("global proc pcTsAddIbt(){ \ntimeSliderEditKeys addInbetween; \n} pcTsAddIbt();")
+	addInbetween;
+
+runTimeCommand
+	-annotation ""
+	-category "Custom Scripts"
+	-hotkeyCtx ""
+	-commandLanguage "mel"
+	-command ("global proc pcTsRemoveIbt(){ \ntimeSliderEditKeys removeInbetween; \n} pcTsRemoveIbt();")
+	RemvoeInbetween;
+

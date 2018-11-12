@@ -1,0 +1,82 @@
+//Maya Preference 2018 (Release 1)
+//
+//
+
+nameCommand
+	-annotation "PlaybackToggleNameCommand"
+	-sourceType "mel"
+	-command ("PlaybackToggle")
+	PlaybackToggleNameCommand;
+
+nameCommand
+	-annotation "SetKeyNameCommand"
+	-sourceType "mel"
+	-command ("SetKey")
+	SetKeyNameCommand;
+
+nameCommand
+	-annotation "GoToMinFrameNameCommand"
+	-sourceType "mel"
+	-command ("GoToMinFrame")
+	GoToMinFrameNameCommand;
+
+nameCommand
+	-annotation "GoToMaxFrameNameCommand"
+	-sourceType "mel"
+	-command ("GoToMaxFrame")
+	GoToMaxFrameNameCommand;
+
+nameCommand
+	-annotation "NextKeyNameCommand"
+	-sourceType "mel"
+	-command ("NextKey")
+	NextKeyNameCommand;
+
+nameCommand
+	-annotation "PreviousKeyNameCommand"
+	-sourceType "mel"
+	-command ("PreviousKey")
+	PreviousKeyNameCommand;
+
+nameCommand
+	-annotation "NextFrameNameCommand"
+	-sourceType "mel"
+	-command ("NextFrame")
+	NextFrameNameCommand;
+
+nameCommand
+	-annotation "PreviousFrameNameCommand"
+	-sourceType "mel"
+	-command ("PreviousFrame")
+	PreviousFrameNameCommand;
+
+nameCommand
+	-annotation "UndoNameCommand"
+	-sourceType "mel"
+	-command ("Undo")
+	UndoNameCommand;
+
+nameCommand
+	-annotation "AddInbetweenNameCommand"
+	-sourceType "mel"
+	-command ("AddInbetween")
+	AddInbetweenNameCommand;
+
+nameCommand
+	-annotation "RemoveInbetweenNameCommand"
+	-sourceType "mel"
+	-command ("RemoveInbetween")
+	RemoveInbetweenNameCommand;
+
+nameCommand
+	-annotation "addInbetweenNameCommand"
+	-sourceType "mel"
+	-command ("addInbetween")
+	addInbetweenNameCommand;
+
+nameCommand
+	-annotation "RemvoeInbetweenNameCommand"
+	-sourceType "mel"
+	-command ("RemvoeInbetween")
+	RemvoeInbetweenNameCommand;
+

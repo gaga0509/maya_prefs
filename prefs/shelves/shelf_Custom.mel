@@ -1,0 +1,332 @@
+global proc shelf_Custom () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 39
+        -height 39
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Red9 - StudioPack" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "C:/Users/gaga_lin/Documents/maya/2017/scripts/Red9/icons/red9.jpg" 
+        -image1 "C:/Users/gaga_lin/Documents/maya/2017/scripts/Red9/icons/red9.jpg" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Red9\nRed9.start()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select object(s) to generate a motion trail over time" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Create Editable Motion Trail" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "motionTrail.png" 
+        -image1 "motionTrail.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doMotionTrail 2 { \"snapshot  -motionTrail 1  -increment 1 -startTime `playbackOptions -query -min` -endTime `playbackOptions -query -max`\", \"1\",\"0\",\"0\",\"1\",\"1\",\"1\"}" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Bake existing animation into keys" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Bake Simulation" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "BS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doBakeSimulationArgList 6 { \"1\",\"0\",\"10\",\"1\",\"0\",\"0\",\"1\",\"1\",\"0\",\"1\",\"animationList\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Display a curve point's distance from the start of the curve" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Arc Length Tool" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "arcLengthDim.png" 
+        -image1 "arcLengthDim.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ArcLengthTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Bake existing animation into keys" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Bake Animation" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "bakeAnimation.png" 
+        -image1 "bakeAnimation.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doBakeSimulationArgList 7 { \"1\",\"0\",\"10\",\"1\",\"0\",\"0\",\"1\",\"1\",\"0\",\"1\",\"animationList\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"0\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a locator object on the grid" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "Locator" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "locator.png" 
+        -image1 "locator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateLocator" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "cMotionTrailUI" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "cMotionTrailUI" 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cMotionTrail" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "cMotionTrailUI" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nspeed = 250\n\narcs = pm.ls(sl=1)\nLen = float(int(abs(arcs[0].arcLength.get() - arcs[1].arcLength.get())))\ntime = (Len / 180.0)*(250.0/speed)\n\nprint int(time*0.74)" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "import pymel.core as pm\n\nspeed = 250\n\narcs = pm.ls(sl=1)\nLen = f..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "速率" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nspeed = 250\n\narcs = pm.ls(sl=1)\nLen = float(int(abs(arcs[0].arcLength.get() - arcs[1].arcLength.get())))\ntime = (Len / 180.0)*(250.0/speed)\n\nprint int(time*0.74)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "//\n//\n// Comment: Show HUD 資訊工具\n//\n// Author: Pan\n\n// Show HUD Display\nglobal proc CGCG_HUD()\n{\n    int $HUDBlock = 0;            // 0 for 720, 3 for 640 (規格定死，不用做選擇！)\n    string $FontSize = \"large\";    // 視狀況決定 small or large (習慣用 small)\n        \n    // 先將原本的 Section 關閉\n    headsUpDisplay -removePosition 4 $HUDBlock;\n    headsUpDisplay -removePosition 5 $HUDBlock;\n    headsUpDisplay -removePosition 7 $HUDBlock;\n    headsUpDisplay -removePosition 9 $HUDBlock;\n    \n    // 4 右上：顯示 Frame Number\n    headsUpDisplay\n        -section 4\n        -block $HUDBlock    //-- 0 for 720, 3 for 640\n        -blockSize $FontSize\n        -label \"Frame:\"\n        -dataFontSize $FontSize\n        -labelFontSize $FontSize\n        -command \"CGCG_HUDGetRightUpDisplay\"\n        -blockAlignment \"right\"\n        -attachToRefresh\n    CGCG_HUDRightUpDisplay;\n    \n    // 5 左下：顯示 Camera Focal Length\n    headsUpDisplay\n        -section 5\n        -block $HUDBlock\n        -blockSize $FontSize\n        -label \"Focal Length:\"\n        -dataFontSize $FontSize\n        -labelFontSize $FontSize\n        -command \"CGCG_HUDGetLeftBottomDisplay\"\n        -blockAlignment \"left\"\n        -attachToRefresh\n    CGCG_HUDLeftBottomDisplay;\n    \n    // 7 中下：顯示 Scene Name\n    headsUpDisplay\n        -section 7\n        -block $HUDBlock    //-- 0 for 720, 3 for 640\n        -blockSize $FontSize\n        -label \"\"\n        -dataFontSize $FontSize\n        -labelFontSize $FontSize\n        -command \"CGCG_HUDGetMiddleBottomDisplay\"\n        -blockAlignment \"left\"\n        -attachToRefresh\n    CGCG_HUDMiddleBottomDisplay;\n    \n    // 9 右下：顯示 User Name\n    headsUpDisplay\n        -section 9\n        -block $HUDBlock    //-- 0 for 720, 3 for 640\n        -blockSize $FontSize\n        -label \"User:\"\n        -dataFontSize $FontSize\n        -labelFontSize $FontSize\n        -command \"CGCG_HUDGetRightBottomDisplay\"\n        -blockAlignment \"right\"\n        -attachToRefresh\n    CGCG_HUDRightDownDisplay;\n    \n}\n\n// HUD Command : 右上顯示 4 (Frame Count)\nglobal proc string CGCG_HUDGetRightUpDisplay()\n{\n    // 取得 Current Frame、Total Frame\n    int $Current = `currentTime -q`;\n    int $Total = `playbackOptions -q -maxTime`;\n    string $result = $Current + \" / \" + $Total;\n    return $result;\n}\n\n// HUD Command : 左下顯示 5 (Camera FocalLength)\nglobal proc string CGCG_HUDGetLeftBottomDisplay()\n{\n    // 依照 Model Panel 改變 Camera\n    string $ModelPane = `paneLayout -q -pane1 viewPanes`;\n    string $Camera = `modelPanel -q -camera $ModelPane`;\n    string $Attr = \".focalLength\";\n    string $result = `getAttr ($Camera + $Attr)`;\n    return $result;\n}\n\n// HUD Command : 中下顯示 7 (Scene Name)\nglobal proc string CGCG_HUDGetMiddleBottomDisplay()\n{\n    string $result = basenameEx(`file -q -sn`);\n    if($result == \"\") $result = \"UNTITLED Scene\";\n    return $result;\n}\n\n// HUD Command : 右下顯示 9 (User Name)\nglobal proc string CGCG_HUDGetRightBottomDisplay()\n{\n    string $result = `getenv \"USER\"`;\n    if($result == \"\") $result = \"UNKNOWN\";\n    return $result;\n}\n\n\n\nCGCG_HUD();\n" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "//\n//\n// Comment: Show HUD 資訊工具\n//\n// Author: Pan\n\n// Show H..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HUD" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "//\n//\n// Comment: Show HUD 資訊工具\n//\n// Author: Pan\n\n// Show HUD Display\nglobal proc CGCG_HUD()\n{\n    int $HUDBlock = 0;            // 0 for 720, 3 for 640 (規格定死，不用做選擇！)\n    string $FontSize = \"large\";    // 視狀況決定 small or large (習慣用 small)\n        \n    // 先將原本的 Section 關閉\n    headsUpDisplay -removePosition 4 $HUDBlock;\n    headsUpDisplay -removePosition 5 $HUDBlock;\n    headsUpDisplay -removePosition 7 $HUDBlock;\n    headsUpDisplay -removePosition 9 $HUDBlock;\n    \n    // 4 右上：顯示 Frame Number\n    headsUpDisplay\n        -section 4\n        -block $HUDBlock    //-- 0 for 720, 3 for 640\n        -blockSize $FontSize\n        -label \"Frame:\"\n        -dataFontSize $FontSize\n        -labelFontSize $FontSize\n        -command \"CGCG_HUDGetRightUpDisplay\"\n        -blockAlignment \"right\"\n        -attachToRefresh\n    CGCG_HUDRightUpDisplay;\n    \n    // 5 左下：顯示 Camera Focal Length\n    headsUpDisplay\n        -section 5\n        -block $HUDBlock\n        -blockSize $FontSize\n        -label \"Focal Length:\"\n        -dataFontSize $FontSize\n        -labelFontSize $FontSize\n        -command \"CGCG_HUDGetLeftBottomDisplay\"\n        -blockAlignment \"left\"\n        -attachToRefresh\n    CGCG_HUDLeftBottomDisplay;\n    \n    // 7 中下：顯示 Scene Name\n    headsUpDisplay\n        -section 7\n        -block $HUDBlock    //-- 0 for 720, 3 for 640\n        -blockSize $FontSize\n        -label \"\"\n        -dataFontSize $FontSize\n        -labelFontSize $FontSize\n        -command \"CGCG_HUDGetMiddleBottomDisplay\"\n        -blockAlignment \"left\"\n        -attachToRefresh\n    CGCG_HUDMiddleBottomDisplay;\n    \n    // 9 右下：顯示 User Name\n    headsUpDisplay\n        -section 9\n        -block $HUDBlock    //-- 0 for 720, 3 for 640\n        -blockSize $FontSize\n        -label \"User:\"\n        -dataFontSize $FontSize\n        -labelFontSize $FontSize\n        -command \"CGCG_HUDGetRightBottomDisplay\"\n        -blockAlignment \"right\"\n        -attachToRefresh\n    CGCG_HUDRightDownDisplay;\n    \n}\n\n// HUD Command : 右上顯示 4 (Frame Count)\nglobal proc string CGCG_HUDGetRightUpDisplay()\n{\n    // 取得 Current Frame、Total Frame\n    int $Current = `currentTime -q`;\n    int $Total = `playbackOptions -q -maxTime`;\n    string $result = $Current + \" / \" + $Total;\n    return $result;\n}\n\n// HUD Command : 左下顯示 5 (Camera FocalLength)\nglobal proc string CGCG_HUDGetLeftBottomDisplay()\n{\n    // 依照 Model Panel 改變 Camera\n    string $ModelPane = `paneLayout -q -pane1 viewPanes`;\n    string $Camera = `modelPanel -q -camera $ModelPane`;\n    string $Attr = \".focalLength\";\n    string $result = `getAttr ($Camera + $Attr)`;\n    return $result;\n}\n\n// HUD Command : 中下顯示 7 (Scene Name)\nglobal proc string CGCG_HUDGetMiddleBottomDisplay()\n{\n    string $result = basenameEx(`file -q -sn`);\n    if($result == \"\") $result = \"UNTITLED Scene\";\n    return $result;\n}\n\n// HUD Command : 右下顯示 9 (User Name)\nglobal proc string CGCG_HUDGetRightBottomDisplay()\n{\n    string $result = `getenv \"USER\"`;\n    if($result == \"\") $result = \"UNKNOWN\";\n    return $result;\n}\n\n\n\nCGCG_HUD();\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "global proc pcStaticalizeChannel(){\ndelete -sc -uac false -hi 0 -cp 0 -shape 0;\n}\npcStaticalizeChannel;\n" 
+        -enableBackground 0
+        -backgroundColor 0 0 0 
+        -highlightColor 0.321569 0.521569 0.65098 
+        -align "center" 
+        -label "global proc pcStaticalizeChannel(){\ndelete -sc -uac false -hi 0 ..." 
+        -labelOffset 0
+        -rotation 0
+        -flipX 0
+        -flipY 0
+        -useAlpha 1
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CleanUnuse" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "global proc pcStaticalizeChannel(){\ndelete -sc -uac false -hi 0 -cp 0 -shape 0;\n}\npcStaticalizeChannel;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 
